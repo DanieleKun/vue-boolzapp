@@ -57,7 +57,7 @@ aside {
 }
 
 #alert-notifications .fas{
-    font-size: 30px;
+    font-size: 25px;
     color: rgb(142, 218, 252);
 }
 
@@ -69,6 +69,11 @@ aside {
     margin: 0 10px
 }
 
+#text-alert a{
+    font-size: 15px;
+    color: rgb(79, 116, 133)
+}
+
 #search-contact{
     display: flex;
     justify-content: center;
@@ -78,6 +83,7 @@ aside {
 #search-contact input {
     width: 90%;
     height: 30px;
+    border: 1px solid lightgray;
 }
 
 .single-contact{
@@ -91,6 +97,7 @@ aside {
 .little-font-gray{
     font-size: 10px;
     color: gray;
+    margin-right: 10px;
 }
 
 /* chat style */
@@ -100,7 +107,7 @@ main {
 }
 
 .chat-top{
-    border-left: 1px solid gray;
+    border-left: 1px solid lightgrey;
     padding-left: 10px;
     width: 100%;
     position: absolute;
@@ -111,6 +118,7 @@ main {
     background-image: url("img/background-chat.png");
     width: 100%;
     height: 100vh;
+    padding-top: 100px;
     overflow-y: auto;
 }
 
@@ -118,8 +126,58 @@ main {
     width: 100%;
     height: 70px;
     background-color: rgb(243, 238, 234);
+    border-left: 1px solid lightgrey;
     position: absolute;
     bottom: 0;
     right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.chat-input input{
+    width: 90%;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+}
+
+.chat-input .fa-smile, .fa-microphone{
+    font-size: 25px;
+    color: gray;
+    margin: 0 20px;
+}
+
+#sent-msg-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 0 30px;
+}
+
+.text-msg {
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-end;
+    margin: 10px 0;
+}
+
+.text-msg p{
+    margin-right: 20px;
+}
+
+.sent {
+    background-color: rgb(213, 249, 186);
+}
+
+.received {
+    background-color: white;
+}
+
+#received-msg-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 30px;
+}

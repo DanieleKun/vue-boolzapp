@@ -44,7 +44,7 @@
                     </div>
                     <!-- input search contact -->
                     <div id="search-contact">
-                        <input type="text" placeholder="Cerca o inizia nuova chat">
+                        <input type="text" placeholder=" Cerca o inizia nuova chat">
                     </div>
 
                     <!-- contact list (da ciclare con vue)-->
@@ -113,10 +113,32 @@
                     </div>
                 </div>
 
+                <!-- chat page -->
                 <div id="chat">
-                    <div class="chat-input">
-                        
+                    <div id="sent-msg-container">
+                        <div class="text-msg sent">
+                            <p>hai portato a spasso il cane?</p>
+                            <span class="little-font-gray">15:30</span>
+                        </div>
+                        <div class="text-msg sent">
+                            <p>Ricordati di stendere i panni</p>
+                            <span class="little-font-gray">15:30</span>
+                        </div>
                     </div>
+                    
+                    <div id="received-msg-container">
+                        <div class="text-msg received">
+                            <p>Tutto fatto!</p>
+                            <span class="little-font-gray">16:10</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- input text box -->
+                <div class="chat-input">
+                    <a href="#"><i class="far fa-smile"></i></a>
+                    <input type="text" placeholder=" Scrivi un messaggio">
+                    <a href="#"><i class="fas fa-microphone"></i></a>
                 </div>
             </main>
 
