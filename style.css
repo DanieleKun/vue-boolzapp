@@ -1,9 +1,100 @@
+/* General */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-#app{
+#background-app{
     font-family: 'Roboto', sans-serif;
+    /* background-color: rgb(219, 219, 210); */
 }
+
+h4{
+    font-weight: 400;
+}
+
+/* style contact list */
+aside {
+    width: 30%;
+    height: 100vh;
+     /* debug */
+     background-color: white;
+}
+
+#top-contact{
+    height: 80px;
+    background-color: rgb(234, 234, 234);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon-avatar img{
+    width: 70px;
+}
+
+.icon-avatar {
+    display: flex;
+    align-items: center;
+}
+
+/* style icon menu coctact */
+.option-icon-contact .fas {
+    color: rgb(177, 177, 177);
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+#alert-notifications{
+    height: 80px;
+    background-color: rgb(142, 218, 252);
+    display: flex;
+    align-items: center;
+}
+
+#alert-notifications .fas{
+    font-size: 30px;
+    color: rgb(142, 218, 252);
+}
+
+#icon-bell {
+    border: 1px solid white;
+    padding: 10px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 0 10px
+}
+
+#search-contact{
+    display: flex;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+#search-contact input {
+    width: 90%;
+    height: 30px;
+}
+
+/* #contact-list{
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+} */
+
+.single-contact{
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.little-font-gray{
+    font-size: 10px;
+    color: gray;
+}
+
