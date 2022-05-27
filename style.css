@@ -94,6 +94,15 @@ aside {
     cursor: pointer;
 }
 
+.single-contact:hover{
+    background-color: rgb(233, 235, 235);
+}
+
+/* add this class with vue js */
+.active-chat{
+    background-color: rgb(233, 235, 235);
+}
+
 .little-font-gray{
     font-size: 10px;
     color: gray;
