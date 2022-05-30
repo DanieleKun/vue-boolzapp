@@ -192,4 +192,6 @@ main {
     background-color: white;
 }
 
-
+.chat-none{
+    display: none;
+}

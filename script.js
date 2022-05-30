@@ -2,6 +2,7 @@ const root = new Vue({
     el: "#app",
     data: {
         activeChat: 0,
+        newMessage: "",
         contacts: [
             {
                 name: 'Zombie',
@@ -167,8 +168,13 @@ const root = new Vue({
         ]
         
     },
-    // methods: {
+     methods: {
+        activeContact(index){
+            this.activeChat = index;
+        },
 
-    // }
+      
+     }
+     
 });
 
