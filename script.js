@@ -1,6 +1,7 @@
 const root = new Vue({
     el: "#app",
     data: {
+        activeChat: 0,
         contacts: [
             {
                 name: 'Zombie',
@@ -165,5 +166,9 @@ const root = new Vue({
             }
         ]
         
-    }
+    },
+    // methods: {
+
+    // }
 });
+

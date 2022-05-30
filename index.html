@@ -58,42 +58,6 @@
                                 <span class="little-font-gray">12:00</span>
                             </div>
                        </div>
-
-                       <!-- <div class="single-contact">
-                        <figure class="icon-avatar"><img src="img/avatar-batman.png" alt="Einstein"><h4>Batman</h4>
-                            <span class="little-font-gray">Ultimo messaggio inviato</span></figure>
-                            
-                            <div class="time">
-                                <span class="little-font-gray">12:00</span>
-                            </div>
-                       </div>
-
-                       <div class="single-contact">
-                        <figure class="icon-avatar"><img src="img/avatar-jason.png" alt="Einstein"><h4>Jason</h4>
-                            <span class="little-font-gray">Ultimo messaggio inviato</span></figure>
-                            
-                            <div class="time">
-                                <span class="little-font-gray">12:00</span>
-                            </div>
-                       </div>
-
-                       <div class="single-contact">
-                        <figure class="icon-avatar"><img src="img/avatar-walter.png" alt="Einstein"><h4>Walter</h4>
-                            <span class="little-font-gray">Ultimo messaggio inviato</span></figure>
-                            
-                            <div class="time">
-                                <span class="little-font-gray">12:00</span>
-                            </div>
-                       </div>
-
-                       <div class="single-contact">
-                        <figure class="icon-avatar"><img src="img/avatar-harley.png" alt="Einstein"><h4>Harley</h4>
-                            <span class="little-font-gray">Ultimo messaggio inviato</span></figure>
-                            
-                            <div class="time">
-                                <span class="little-font-gray">12:00</span>
-                            </div>
-                       </div> -->
                        
                     </div>
                 </div>
@@ -116,23 +80,23 @@
 
                 <!-- chat page -->
                 <div id="chat">
-                    <div id="sent-msg-container">
-                        <div class="text-msg sent">
-                            <p>hai portato a spasso il cane?</p>
-                            <span class="little-font-gray">15:30</span>
+                    <div v-for="(msg, idx) in contacts.messages" class="received-msg-container" :class="msg.status === 'sent' ? 'sent-msg-container' : ''" :key="idx">
+                        <div class="text-msg received-color" :class="msg.status === 'sent' ? 'sent-color' : ''">
+                            <p>{{msg.message}}</p>
+                            <span class="little-font-gray">{{msg.date}}</span>
                         </div>
-                        <div class="text-msg sent">
+                        <!-- <div class="text-msg sent-color">
                             <p>Ricordati di stendere i panni</p>
                             <span class="little-font-gray">15:30</span>
-                        </div>
+                        </div> -->
                     </div>
 
-                    <div id="received-msg-container">
-                        <div class="text-msg received">
+                    <!-- <div class="received-msg-container">
+                        <div class="text-msg received-color">
                             <p>Tutto fatto!</p>
                             <span class="little-font-gray">16:10</span>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
                 <!-- input text box -->
