@@ -166,15 +166,36 @@ const root = new Vue({
                 ],
             }
         ]
-        
+
     },
-     methods: {
-        activeContact(index){
+    methods: {
+        activeContact(index) {
             this.activeChat = index;
         },
 
-      
-     }
-     
+        addMsg() {
+            if (this.newMessage.trim() !== "") {
+                const msg = {
+                    date: '10/01/2020 15:51:00',
+                    message: this.newMessage,
+                    status: 'sent'
+                };
+                this.contacts[this.activeChat].messages.push(msg);
+                this.newMessage = '';
+                setTimeout(this.replyMsg, 1000);
+            }
+        },
+
+        replyMsg(){
+            const msg = {
+                date: '10/01/2020 15:52:00',
+                message: 'ok',
+                status: 'received'
+            };
+            this.contacts[this.activeChat].messages.push(msg);
+        }
+
+    }
+
 });
 
