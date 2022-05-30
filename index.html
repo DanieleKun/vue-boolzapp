@@ -80,8 +80,8 @@
 
                 <!-- chat page -->
                 <div id="chat">
-                    <div v-for="(msg, idx) in contacts.messages" class="received-msg-container" :class="msg.status === 'sent' ? 'sent-msg-container' : ''" :key="idx">
-                        <div class="text-msg received-color" :class="msg.status === 'sent' ? 'sent-color' : ''">
+                    <div v-for="(msg, idx) in contacts.messages" :class="msg.status === 'sent' ? 'sent-msg-container' : 'received-msg-container'" :key="idx">
+                        <div class="text-msg" :class="msg.status === 'sent' ? 'sent-color' : 'received-color'">
                             <p>{{msg.message}}</p>
                             <span class="little-font-gray">{{msg.date}}</span>
                         </div>
