@@ -3,6 +3,7 @@ const root = new Vue({
     data: {
         activeChat: 0,
         newMessage: "",
+        contactsFound: "",
         contacts: [
             {
                 name: 'Zombie',
@@ -193,9 +194,33 @@ const root = new Vue({
                 status: 'received'
             };
             this.contacts[this.activeChat].messages.push(msg);
-        }
+        },
+        searchContacts(){
+            filter = this.contactsFound.toUpperCase();
+            for (i = 0; i < this.contacts.length; i++) {
+                if (this.contacts[i].name.toUpperCase().indexOf(filter) > -1) {
+                    this.contacts[i].visible = true;
+                } else {
+                    this.contacts[i].visible = false;
+                }
+              }
+              console.log(filter);
+    }
 
     }
 
 });
 
+
+
+
+
+/*let contactsFound = this.contactsFound.toUpperCase();
+            for (let i = 0; i < this.contacts.length; i++) {
+                if (this.contacts[i].name.toUpperCase().indexOf(this.contactsFound.toUpperCase()) > -1) {
+                  this.contacts[i].visible = true;
+                } else {
+                    this.contacts[i].visible = false;
+                }
+        }
+        console.log(contactsFound);*/
