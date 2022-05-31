@@ -24,7 +24,12 @@
                 <!-- My profile and menu -->
                 <div id="left-contact">
                     <div class="top-contact">
-                        <figure class="icon-avatar"><img src="img/avatar-einstein.png" alt="Einstein"><h4>Albert</h4></figure>
+                        <figure class="icon-avatar">
+                            <img src="img/avatar-einstein.png" alt="Einstein">
+                            <div class="text-avatar">
+                                <h4>Albert</h4>
+                            </div>
+                        </figure>
                         <!-- icon menu -->
                         <div class="option-icon-contact">
                             <a href="#"><i class="fas fa-circle-notch"></i></a>
@@ -51,8 +56,12 @@
                     <div id="contact-list">
 
                        <div v-for="(item, i) in contacts" class="single-contact" @click="activeContact(i)" :class="[i === activeChat ? 'active-chat': '' , item.visible === false ? 'contacts-none' : '']" :key="i">
-                        <figure class="icon-avatar"><img :src="item.avatar" :alt="item.name"><h4>{{item.name}}</h4>
-                            <span class="little-font-gray">Ultimo messaggio inviato</span></figure>
+                        <figure class="icon-avatar"><img :src="item.avatar" :alt="item.name">
+                            <div class="text-avatar">
+                                <h4>{{item.name}}</h4>
+                            <span class="little-font-gray">Ultimo messaggio inviato</span>
+                            </div>
+                        </figure>
                             <!-- icon menu -->
                             <div class="time">
                                 <span class="little-font-gray">12:00</span>
@@ -69,9 +78,11 @@
                 <!-- info contact and menu chat -->
                 <div class="top-contact chat-top">
                     <figure class="icon-avatar"><img :src="contacts[activeChat].avatar" :alt="contacts[activeChat].name">
-                        <h4>{{contacts[activeChat].name}}</h4>
+                        <div class="text-avatar">
+                            <h4>{{contacts[activeChat].name}}</h4>
                         
                         <span class="little-font-gray">Ultimo messaggio inviato</span>
+                        </div>
                     </figure>
                     <!-- icon menu -->
                     <div class="option-icon-contact">
